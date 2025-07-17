@@ -95,56 +95,63 @@ body {
 
 /* ABOUT section */
 
-.about {
+.bio {
     background: var(--bg-tertiary);
     color: var(--light-txt-color);
 }
 
-.about>.content {
+.bio>.content {
     display: flex;
-    flex-direction: column;
     align-items: center;
     
     width: 70%;
+    height: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
-.about>.content>* {
+.bio>.content>.about {
     width: 60%;
-    text-wrap: pretty;
+
+    display: flex;
 }
 
-.about>.content>.title>h1 {
+.bio>.content>.about>.article>.title>h1 {
     text-align: center;
     font-size: 5rem;
     margin-bottom: 16px;
     cursor: default;
 }
 
-.about>.content>.txt_container {
-    font-size: 1.2rem;
-    text-align: justify;
-}
-
-.about>.content>.txt_container {
+.bio>.content>.about>.article>.txt_container {
     display: flex;
     align-items: center;
+    justify-content: center;
+    
+    font-size: 1.2rem;
+    text-align: justify;
 
     gap: 30px;
 
     cursor: default;
 }
 
-.about>.content>.txt_container>span {
+.bio>.content>span {
     font-size: 4rem;
     cursor: pointer;
+
+    text-align: center;
+    align-content: center;
+    height: 100%;
+    width: 20%;
 }
 
-.about>.image {
+.bio>.image {
     width: 30%;
     height: auto;
 
     display: flex;
-    justify-content: left;
+    justify-content: right;
     align-items: center;
 }
 
