@@ -1,72 +1,66 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-    <title>Portfolio</title>
-</head>
-<body>
+{% extends "admin/base_layout.html" %}
+
+{% block title %}Portfolio{% endblock %}
+ 
     <!-- Welcome page -->
-    <div class="welcome">
-        <div class="content">
-            <ul class="content__list">
-                <li>Hallo</li>
-                <li>Hello</li>
-                <li>Bonjour</li>
-                <li>Hola</li>
-                <li>Ciao</li>
-            </ul>
-        </div>
-        <a href="#bio"><span class="material-symbols-outlined continue">arrow_drop_down_circle</span></a>
-    </div>
+{% block textSwapper__items %}
+
+<div class="textSwapper__content" id="welcome-carousel">
+    <div class="textSwapper__item"><h1>Bonjour</h1></div>
+    <div class="textSwapper__item"><h1>Hello</h1></div>
+    <div class="textSwapper__item"><h1>Hallo</h1></div>
+    <div class="textSwapper__item"><h1>Hola</h1></div>
+    <div class="textSwapper__item"><h1>Hej</h1></div>
+    <div class="textSwapper__item"><h1>Ciao</h1></div>
+    <div class="textSwapper__item"><h1>Yasou</h1></div>
+    <div class="textSwapper__item"><h1>Bonjour</h1></div>
+</div>
+{% endblock %}
+
     <!-- About me section -->
-    <div class="row bio" id="bio">
-        <div class="image">
-            <img src="../static/about_pic.png" alt="Image of a man sitting">
+{% block carrousel__about__items %}
+
+<div class="carrousel__item about__item">
+    <h1>About me</h1>
+    <p>My passion for technology started very early. At just <strong>8 years old</strong>, I built my very first website out of pure curiosity. 
+        That simple project was the spark. At 9, I dove into Unity to understand how to create games. A year later, I 
+        was building my own version of <strong>Flappy Bird</strong>, discovering both the joy (and frustration) of game development.</p>
+    <p>As I grew older, I wanted to go further. I learned how to work with databases and then moved into web development 
+        with Flask and Django. These frameworks opened the door to Python, a language I now use almost daily. Always 
+        looking to push my limits, I jumped into <strong>deep learning</strong>. Understanding neural networks, working with datasets, 
+        training models... it quickly stopped being just a hobby. It became a true passion.</p>
+    <p>Today, I continue learning and developing projects that combine my core interests: artificial intelligence, web 
+        development, and interactive systems. I love turning ideas into real solutions, exploring cutting-edge technologies, 
+        and—most of all—building with purpose.</p>
+</div>
+<div class="carrousel__item about__item">
+    <div class="card mc__website">
+        <div class="card__text">
+            <h2>My first website</h2>
         </div>
-        <div class="content">
-            <span class="material-symbols-outlined change_about">arrow_menu_close</span>
-            <div class="about">
-                <div class="article">
-                    <div class="title">
-                        <h1>About Me</h1>
-                    </div>
-                    <div class="txt_container">
-                        <div class="txt">
-                            <p>
-                                I am a passionate web developer with a keen interest in creating dynamic and responsive web applications. 
-                                My journey in web development began with a fascination for how websites work and the technologies behind them.
-                                I enjoy learning new frameworks and languages to enhance my skills and deliver better user experiences.
-                            </p><p>
-                                I have worked on various projects, ranging from simple static websites to complex web applications.
-                                I have experience in HTML, CSS, JavaScript, and various frameworks like Flask.
-                                In my free time, I love exploring new technologies, contributing to open-source projects, and sharing knowledge with the community.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="article">
-                    <div class="title">
-                        <h1>Dev Life</h1>
-                    </div>
-                    <div class="txt_container">
-                        <div class="txt">
-                            <p>
-                                As a developer, I thrive on solving problems and building efficient solutions. 
-                                I enjoy the challenge of debugging and optimizing code to improve performance.
-                                Collaboration is key in my work, and I value the input of my peers to create better products.
-                            </p><p>
-                                I am always looking for opportunities to grow and learn, whether through online courses, workshops, or community events.
-                                My goal is to become a full-stack developer and contribute to innovative projects that make a difference.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <span class="material-symbols-outlined change_about">arrow_menu_open</span>
+    </div>    
+</div>
+<div class="carrousel__item about__item">
+    <div class="card mc__website--code">
+        <div class="card__text">
+            <h2>The code of this website</h2>
         </div>
     </div>
-</body>
-</html>
+</div>
+
+<div class="carrousel__nav prev">
+    <span class="material-symbols-outlined">expand_circle_right</span>
+</div>
+<div class="carrousel__nav next">
+    <span class="material-symbols-outlined">expand_circle_right</span>
+</div>
+
+{% endblock %}
+
+{% block projects_mashup %}
+
+<div class="card">
+    <!-- Check Figma for the concept -->
+</div>
+
+{% endblock %}
