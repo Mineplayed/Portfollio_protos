@@ -7,7 +7,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <script src="../../static/carrousel.js"></script>
     <script src="../../static/textSwapper.js"></script>
-    <script src="../../static/cards_infos.js"></script>
     <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
@@ -36,5 +35,13 @@
         </div>
     </div>
 
+    <div class="section projects__about">
+        <div class="content">
+            {% block starbound_fan_website__about %}{% endblock %}
+            {% block cryptX_2000__about %}{% endblock %}
+            {% block flappy_pigeon__about %}{% endblock %}
+            {% block roll_a_ball__about %}{% endblock %}
+        </div>
+    </div>
 </body>
 </html>

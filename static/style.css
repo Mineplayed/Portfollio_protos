@@ -5,10 +5,13 @@
     --complementaty-first: #E49924;
     --complementaty-second: #BC975B;
 
-    --card-text-background: rgba(255, 255, 255, 0.85);
+    --card-title-background: rgba(255, 255, 255, 0.85);
+    --card-infos-background: #4682A9;
 
     --light-txt-color: #fffdfa;
     --dark-txt-color: #333;
+
+    --shadow: rgba(0, 0, 0, 0.384);
     
 
     --temp-color: #000000;
@@ -22,7 +25,7 @@
     --img-Flappy-pigeon: url("../static/Flappy-pigeon.png");
     --img-roll-a-ball: url("../static/roll-a-ball.png");
 
-    scrollbar-width: none;
+    /* scrollbar-width: none; */
 }
 
 a { text-decoration: none;
@@ -37,27 +40,13 @@ body {
     cursor: default;
 }
 
-/**********************************
-|                                  |
-|             SHORTCUTS            |
-|                                  |
-***********************************/
-
-.One_vh { height: 100vh; }
-.XL_h { height: 70%; }
-.L_h { height: 60%; }
-.M_h { height: 40%; }
-.S_h { height: 30%; }
-
-.L_w { width: 50%; }
-.M_w { width: 40%; }
-.S_w { width: 25%; }
 
 /**********************************
 |                                  |
 |             SECTION              |
 |                                  |
 ***********************************/
+
 
 .section {
     min-height: 100vh;
@@ -83,11 +72,19 @@ body {
     color: var(--secondary);
 }
 
+.section.projects__about {
+    padding: 5% 0 5% 0;
+    background-color: var(--primary);
+    color: var(--light-txt-color);
+}
+
+
 /**********************************
 |                                  |
 |          ROW & COLLUMN           |
 |                                  |
 ***********************************/
+
 
 .row {
     display: flex;
@@ -96,8 +93,12 @@ body {
     align-items: center;
 
     width: 100%;
+}
 
-    gap: 3%;
+.row.inverted_row { 
+    flex-direction: row-reverse;
+    border-radius: 0 20px 20px 0;
+    box-shadow: 15px 10px 10px var(--shadow);
 }
 
 .row h1 { font-size: 8rem; }
@@ -111,11 +112,33 @@ body {
     height: 100%;
 }
 
+.collumn.inverted_collumn { flex-direction: column-reverse; }
+
 .collumn.title { justify-content: center; }
 
 .one_collumn { width: 75%; }
 .two_collumn { width: 45%; }
 .three_collumn { width: 30%; }
+
+.collumn-img { 
+    min-height: 100%;
+    min-width: 100%;
+
+    background-size: cover;
+    background-position: center;
+
+    border-radius: 20px 0 0 20px;
+    box-shadow: -15px 10px 10px var(--shadow);
+}
+
+.inverted_row .projects__about-text {
+    border-radius: 20px 0 0 20px;
+}
+
+.inverted_row .collumn-img {
+    border-radius: 0 20px 20px 0;
+    box-shadow: 15px 10px 10px var(--shadow);
+}
 
 /**********************************
 |                                  |
@@ -188,32 +211,35 @@ body {
 .carrousel__nav.prev { left: 0; }
 .carrousel__nav.next { right: 0; }
 
+
 /**********************************
 |                                  |
 |               CARDS              |
 |                                  |
 ***********************************/
 
+
 .card {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-
+    
     width: 80%;
-    /* height: 50%; */
-
+    
     background-size: 100% 100%;
     background-image: var(--img-placeholder);
     
     border-radius: 10px;
-    box-shadow: 15px 10px 10px rgba(0, 0, 0, 0.384);
+    box-shadow: 15px 10px 10px var(--shadow);
 }
+
 
 .collumn .card {
     margin-top: 10%;
 }
 
 .card__title {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -221,32 +247,122 @@ body {
     width: 100%;
     height: 100%;
 
-    transition: all .5s ease;
-    background-color: var(--card-text-background);
+    transition: all .5s ease-in-out;
+    background-color: var(--card-title-background);
     color: var(--tertiary);
     border-radius: 10px;
     
-    display: none;
+    transform: scaleY(0);
+    transform-origin:  bottom; 
+}
+
+.card:hover .card__title {
+    transform: scaleY(1);        
+}
+
+.card__title:active .card__infos {
+    transform: scaleY(1);
 }
 
 .card__infos {
+    display: none;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     
-    transition: all .5s ease;
+    transition: all .5s ease-in-out;
     
     height: 100%;
     width: 100%;
-    background-color: var(--card-text-background);
     border-radius: 10px;
 
-    display: none;
+    background-color: var(--card-infos-background);
+    color: var(--light-txt-color);
+
+    transform: scaleY(0);
+    transform-origin:  bottom; 
 }
+
+.card__infos * {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    width: 100%;
+}
+
+.card__infos__text h2 {
+    margin: 1% 0 1% 0;
+}
+
+.usedLanguages {
+    list-style-type: none;
+    padding-left: 5%;
+    padding-right: 5%;
+    
+    width: 90%;
+
+    justify-content: center;
+}
+
+.usedLanguages__language {
+    flex-direction: row;
+}
+
+.usedLanguages__language p {
+    margin: 1%;
+    width: 20%;
+    text-align: left;
+    font-size: small;
+}
+
+.usedLanguages__language img {
+    width: 5%;
+}
+
+
+/**********************************
+|                                  |
+|          Projects about          |
+|                                  |
+***********************************/
+
+
+.projects__about .row {
+    margin-top: 5%;
+}
+
+.projects__about-text {
+    background-color: var(--secondary);
+    box-shadow: 0 10px 10px var(--shadow);
+    border-radius: 0 20px 20px 0;
+}
+
+.projects__about .collumn-img, .projects__about .row.inverted_row .collumn-img {
+    box-shadow: 0 10px 10px var(--shadow);
+}
+
+
+/**********************************
+|                                  |
+|             SHORTCUTS            |
+|                                  |
+***********************************/
+
+.One_vh { height: 100vh; }
+.M_vh { height: 40vh; }
+
+.XL_h { height: 70%; }
+.L_h { height: 60%; }
+.M_h { height: 40%; }
+.S_h { height: 30%; }
+
+.XL_w { width: 70%; }
+.L_w { width: 60%; }
+.M_w { width: 40%; }
+.S_w { width: 30%; }
 
 .mc__website { background-image: var(--img-minecraftwebsite); }
 .mc__website--code { background-image: var(--img-minecraftwebsite-code); }
 .starbound-fan-website { background-image: var(--img-Starbound-fan-website); }
-.flappy-pigeon { background-image: var(--img-Flappy-pigeon); }
 .cryptX-2000 { background-image: var(--img-CryptX-2000); }
+.flappy-pigeon { background-image: var(--img-Flappy-pigeon); }
 .roll-a-ball { background-image: var(--img-roll-a-ball); }

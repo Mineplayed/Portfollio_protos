@@ -2,11 +2,13 @@
 
 {% block title %}Portfolio{% endblock %}
  
+
 <!-------------------------------------------
 |                                            |
 |                  WELCOME                   |
 |                                            |
 -------------------------------------------->    
+
 
 {% block textSwapper__items %}
 
@@ -22,11 +24,13 @@
 </div>
 {% endblock %}
 
+
 <!-------------------------------------------
 |                                            |
-|                  ABOUT                     |
+|                 ABOUT ME                   |
 |                                            |
 -------------------------------------------->    
+
 
 {% block carrousel__about__items %}
 
@@ -80,7 +84,6 @@
 <div class="row S_h">
     <div class="collumn title one_collumn">
         <h1>Projects</h1>
-        <!-- <p>Here are my different finished projects</p> -->
     </div>
 </div>
 
@@ -90,10 +93,8 @@
             <div class="card__title">
                 <h2>Starbound fan website</h2>
             </div>
-            <div class="card__infos">
-                <h2>LOL</h2>
-            </div>
         </div>
+
         <div class="card S_h flappy-pigeon">
             <div class="card__title">
                 <h2>Flappy pigeon</h2>
@@ -107,6 +108,7 @@
                 <h2>CryptX-2000</h2>
             </div>
         </div>
+
         <div class="card S_h roll-a-ball">
             <div class="card__title">
                 <h2>Roll a Ball</h2>
@@ -115,4 +117,52 @@
     </div>
 </div>
 
+{% endblock %}
+
+
+<!-------------------------------------------
+|                                            |
+|              About Projects                |
+|                                            |
+-------------------------------------------->
+
+
+
+{% block starbound_fan_website__about %}
+<div class="row M_vh">
+    <div class="collumn S_w">
+        <div class="collumn-img starbound-fan-website"></div>
+    </div>
+    <div class="collumn projects__about-text XL_w"></div>
+</div>
+{% endblock %}
+
+
+{% block cryptX_2000__about %}
+<div class="row M_vh inverted_row">
+    <div class="collumn S_w">
+        <div class="collumn-img cryptX-2000"></div>
+    </div>
+    <div class="collumn projects__about-text XL_w"></div>
+</div>
+{% endblock %}
+
+
+{% block flappy_pigeon__about %}
+<div class="row M_vh">
+    <div class="collumn S_w">
+        <div class="collumn-img flappy-pigeon"></div>
+    </div>
+    <div class="collumn projects__about-text XL_w"></div>
+</div>
+{% endblock %}
+
+
+{% block roll_a_ball__about %}
+<div class="row M_vh inverted_row">
+    <div class="collumn S_w">
+        <div class="collumn-img roll-a-ball"></div>
+    </div>
+    <div class="collumn projects__about-text XL_w"></div>
+</div>
 {% endblock %}
