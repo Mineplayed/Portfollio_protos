@@ -2,7 +2,12 @@
 
 {% block title %}Portfolio{% endblock %}
  
-    <!-- Welcome page -->
+<!-------------------------------------------
+|                                            |
+|                  WELCOME                   |
+|                                            |
+-------------------------------------------->    
+
 {% block textSwapper__items %}
 
 <div class="textSwapper__content" id="welcome-carousel">
@@ -17,7 +22,12 @@
 </div>
 {% endblock %}
 
-    <!-- About me section -->
+<!-------------------------------------------
+|                                            |
+|                  ABOUT                     |
+|                                            |
+-------------------------------------------->    
+
 {% block carrousel__about__items %}
 
 <div class="carrousel__item about__item">
@@ -34,15 +44,15 @@
         and—most of all—building with purpose.</p>
 </div>
 <div class="carrousel__item about__item">
-    <div class="card mc__website">
-        <div class="card__text">
+    <div class="card mc__website L_h">
+        <div class="card__title">
             <h2>My first website</h2>
         </div>
     </div>    
 </div>
 <div class="carrousel__item about__item">
-    <div class="card mc__website--code">
-        <div class="card__text">
+    <div class="card mc__website--code L_h">
+        <div class="card__title">
             <h2>The code of this website</h2>
         </div>
     </div>
@@ -57,10 +67,52 @@
 
 {% endblock %}
 
+
+<!-------------------------------------------
+|                                            |
+|                  MASHUP                    |
+|                                            |
+-------------------------------------------->
+
+
 {% block projects_mashup %}
 
-<div class="card">
-    <!-- Check Figma for the concept -->
+<div class="row S_h">
+    <div class="collumn title one_collumn">
+        <h1>Projects</h1>
+        <!-- <p>Here are my different finished projects</p> -->
+    </div>
+</div>
+
+<div class="row XL_h">
+    <div class="collumn two_collumn">
+        <div class="card S_h starbound-fan-website">
+            <div class="card__title">
+                <h2>Starbound fan website</h2>
+            </div>
+            <div class="card__infos">
+                <h2>LOL</h2>
+            </div>
+        </div>
+        <div class="card S_h flappy-pigeon">
+            <div class="card__title">
+                <h2>Flappy pigeon</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="collumn two_collumn">
+        <div class="card S_h cryptX-2000">
+            <div class="card__title">
+                <h2>CryptX-2000</h2>
+            </div>
+        </div>
+        <div class="card S_h roll-a-ball">
+            <div class="card__title">
+                <h2>Roll a Ball</h2>
+            </div>
+        </div>
+    </div>
 </div>
 
 {% endblock %}

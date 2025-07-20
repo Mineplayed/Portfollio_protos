@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-    <script src="../static/carrousel.js"></script>
-    <script src="../static/textSwapper.js"></script>
+    <script src="../../static/carrousel.js"></script>
+    <script src="../../static/textSwapper.js"></script>
+    <script src="../../static/cards_infos.js"></script>
     <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
     
     <div class="section welcome">
-        <div class="content">
+        <div class="content One_vh">
             <div class="textSwapper">
                 {% block textSwapper__items %}{% endblock %}
             </div>
@@ -20,7 +21,7 @@
     </div>
 
     <div class="section about">
-        <div class="content">
+        <div class="content One_vh">
             <div class="carrousel">
                 <div class="carrousel__content">
                 {% block carrousel__about__items %}{% endblock %}
@@ -30,7 +31,7 @@
     </div>
 
     <div class="section mashup">
-        <div class="content">
+        <div class="content One_vh">
             {% block projects_mashup %}{% endblock %}
         </div>
     </div>

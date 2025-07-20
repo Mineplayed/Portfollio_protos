@@ -20,12 +20,12 @@ function initCarrousel() {
         );
 
         const carrouselNavigationBtns = carrousel.querySelectorAll('.carrousel__nav');
-        carrouselNavigationBtns[0].addEventListener('click', () => ChangeCarrouselItemAbout(index, -1) );
-        carrouselNavigationBtns[1].addEventListener('click', () => ChangeCarrouselItemAbout(index, 1) );
+        carrouselNavigationBtns[0].addEventListener('click', () => changeCarrouselItemAbout(index, -1) );
+        carrouselNavigationBtns[1].addEventListener('click', () => changeCarrouselItemAbout(index, 1) );
     }
 }
 
-function ChangeCarrouselItemAbout(index, direction) {
+function changeCarrouselItemAbout(index, direction) {
     let carrousel = carrousels[index]
 
     carrousel.currentItemIndex += direction;

@@ -1,17 +1,26 @@
 :root {
-    --primary: #00ACF5;
-    --secondary: #2D8DB5;
-    --tertiary: #3B6475;
+    --primary: #91C8E4;
+    --secondary: #749BC2;
+    --tertiary: #4682A9;
     --complementaty-first: #E49924;
     --complementaty-second: #BC975B;
 
+    --card-text-background: rgba(255, 255, 255, 0.85);
+
     --light-txt-color: #fffdfa;
     --dark-txt-color: #333;
+    
 
     --temp-color: #000000;
     
+    --img-placeholder: url("../static/img_placeholder.png");
     --img-minecraftwebsite: url("../static/minecraft_website.png");
     --img-minecraftwebsite-code: url("../static/minecraft_website_code.png");
+    --img-Starbound-fan-website: url("../static/Starbound-fan-website.png");
+    --img-CryptX-2000: url("../static/CryptX-2000.png");
+    --img-pronote-grade-comp: url("");
+    --img-Flappy-pigeon: url("../static/Flappy-pigeon.png");
+    --img-roll-a-ball: url("../static/roll-a-ball.png");
 
     scrollbar-width: none;
 }
@@ -28,15 +37,27 @@ body {
     cursor: default;
 }
 
-.grid {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    margin: 150px auto;
-    gap: 32px;
-}
+/**********************************
+|                                  |
+|             SHORTCUTS            |
+|                                  |
+***********************************/
 
-/* Sections */
+.One_vh { height: 100vh; }
+.XL_h { height: 70%; }
+.L_h { height: 60%; }
+.M_h { height: 40%; }
+.S_h { height: 30%; }
+
+.L_w { width: 50%; }
+.M_w { width: 40%; }
+.S_w { width: 25%; }
+
+/**********************************
+|                                  |
+|             SECTION              |
+|                                  |
+***********************************/
 
 .section {
     min-height: 100vh;
@@ -45,19 +66,62 @@ body {
 .section .content {
     margin: 0 auto;
     max-width: 1000px;
-    height: 100vh;
 }
 
 .section.welcome {  
-    color: var(--primary); 
+    color: var(--secondary); 
     background-color: var(--light-txt-color);
 }
 
 .section.about {
-    background-color: var(--secondary);
+    background-color: var(--tertiary);
     color: var(--light-txt-color); 
 }
-/* Carrousel */
+
+.section.mashup {
+    background-color: var(--light-txt-color);
+    color: var(--secondary);
+}
+
+/**********************************
+|                                  |
+|          ROW & COLLUMN           |
+|                                  |
+***********************************/
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+
+    gap: 3%;
+}
+
+.row h1 { font-size: 8rem; }
+
+.collumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    height: 100%;
+}
+
+.collumn.title { justify-content: center; }
+
+.one_collumn { width: 75%; }
+.two_collumn { width: 45%; }
+.three_collumn { width: 30%; }
+
+/**********************************
+|                                  |
+|            CARROUSEL             |
+|                                  |
+***********************************/
 
 .carrousel,
 .carrousel__content,
@@ -124,7 +188,11 @@ body {
 .carrousel__nav.prev { left: 0; }
 .carrousel__nav.next { right: 0; }
 
-/* Cards */
+/**********************************
+|                                  |
+|               CARDS              |
+|                                  |
+***********************************/
 
 .card {
     display: flex;
@@ -132,34 +200,53 @@ body {
     justify-content: flex-end;
 
     width: 80%;
-    height: 50%;
+    /* height: 50%; */
 
     background-size: 100% 100%;
-    color: var(--tertiary);
-
+    background-image: var(--img-placeholder);
+    
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 15px 10px 10px rgba(0, 0, 0, 0.384);
 }
 
-.card__text {
-    display: flex;
+.collumn .card {
+    margin-top: 10%;
+}
+
+.card__title {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    
     width: 100%;
-    height: 25%;
+    height: 100%;
 
-    background-color: rgba(255, 255, 255, 0.85);
-    border-radius: 0 0 10px 10px;
+    transition: all .5s ease;
+    background-color: var(--card-text-background);
+    color: var(--tertiary);
+    border-radius: 10px;
+    
+    display: none;
+}
+
+.card__infos {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    transition: all .5s ease;
+    
+    height: 100%;
+    width: 100%;
+    background-color: var(--card-text-background);
+    border-radius: 10px;
+
+    display: none;
 }
 
 .mc__website { background-image: var(--img-minecraftwebsite); }
 .mc__website--code { background-image: var(--img-minecraftwebsite-code); }
-
-/* MASHUP section */
-
-.section.mashup {
-    background-color: var(--light-txt-color);
-    color: var(--dark-txt-color);
-}
+.starbound-fan-website { background-image: var(--img-Starbound-fan-website); }
+.flappy-pigeon { background-image: var(--img-Flappy-pigeon); }
+.cryptX-2000 { background-image: var(--img-CryptX-2000); }
+.roll-a-ball { background-image: var(--img-roll-a-ball); }
