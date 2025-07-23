@@ -12,7 +12,7 @@
 <body>
     
     <div class="section welcome">
-        <div class="content One_vh">
+        <div class="content L_vh">
             <div class="textSwapper">
                 {% block textSwapper__items %}{% endblock %}
             </div>
@@ -20,7 +20,7 @@
     </div>
 
     <div class="section about">
-        <div class="content One_vh">
+        <div class="content L_vh">
             <div class="carrousel">
                 <div class="carrousel__content">
                 {% block carrousel__about__items %}{% endblock %}
@@ -30,18 +30,32 @@
     </div>
 
     <div class="section mashup">
-        <div class="content One_vh">
+        <div class="content XL_vh">
             {% block projects_mashup %}{% endblock %}
         </div>
     </div>
 
     <div class="section projects__about">
         <div class="content">
-            {% block starbound_fan_website__about %}{% endblock %}
             {% block cryptX_2000__about %}{% endblock %}
-            {% block flappy_pigeon__about %}{% endblock %}
             {% block roll_a_ball__about %}{% endblock %}
+            {% block starbound_fan_website__about %}{% endblock %}
+            {% block flappy_pigeon__about %}{% endblock %}
+            {% block minecraft_website__about %}{% endblock %}
         </div>
+    </div>
+
+    <div class="section__contact">
+        <div class="content">
+            {% block contact %}{% endblock %}
+        </div>
+        
+        <a href="https://github.com/Mineplayed" target="_blank">
+            <div class="contact">
+                <img src="../../static/github.png" alt="github icon">
+                <h1>@Super_BN</h1>
+            </div>
+        </a>
     </div>
 </body>
 </html>

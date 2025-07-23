@@ -48,14 +48,14 @@
         and—most of all—building with purpose.</p>
 </div>
 <div class="carrousel__item about__item">
-    <div class="card mc__website L_h">
+    <div class="card XXL_w mc__website L_h">
         <div class="card__title">
             <h2>My first website</h2>
         </div>
     </div>    
 </div>
 <div class="carrousel__item about__item">
-    <div class="card mc__website--code L_h">
+    <div class="card XXL_w mc__website--code L_h">
         <div class="card__title">
             <h2>The code of this website</h2>
         </div>
@@ -81,21 +81,21 @@
 
 {% block projects_mashup %}
 
-<div class="row S_h">
+<div class="row XS_h">
     <div class="collumn title one_collumn">
         <h1>Projects</h1>
     </div>
 </div>
 
-<div class="row XL_h">
+<div class="row M_h">
     <div class="collumn two_collumn">
-        <div class="card S_h starbound-fan-website">
+        <div class="card XXL_w M_h starbound-fan-website">
             <div class="card__title">
                 <h2>Starbound fan website</h2>
             </div>
         </div>
 
-        <div class="card S_h flappy-pigeon">
+        <div class="card XXL_w M_h flappy-pigeon">
             <div class="card__title">
                 <h2>Flappy pigeon</h2>
             </div>
@@ -103,15 +103,25 @@
     </div>
 
     <div class="collumn two_collumn">
-        <div class="card S_h cryptX-2000">
+        <div class="card XXL_w M_h cryptX-2000">
             <div class="card__title">
                 <h2>CryptX-2000</h2>
             </div>
         </div>
 
-        <div class="card S_h roll-a-ball">
+        <div class="card XXL_w M_h roll-a-ball">
             <div class="card__title">
                 <h2>Roll a Ball</h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row S_h">
+    <div class="collumn one_collumn">
+        <div class="card L_h L_w mc__website">
+            <div class="card__title">
+                <h2>Minecraft Website</h2>
             </div>
         </div>
     </div>
@@ -127,42 +137,118 @@
 -------------------------------------------->
 
 
-
-{% block starbound_fan_website__about %}
-<div class="row M_vh">
-    <div class="collumn S_w">
-        <div class="collumn-img starbound-fan-website"></div>
-    </div>
-    <div class="collumn projects__about-text XL_w"></div>
-</div>
-{% endblock %}
-
-
 {% block cryptX_2000__about %}
-<div class="row M_vh inverted_row">
+<div class="row M_vh inverted_row row__cryptx-2000">
     <div class="collumn S_w">
         <div class="collumn-img cryptX-2000"></div>
     </div>
-    <div class="collumn projects__about-text XL_w"></div>
-</div>
-{% endblock %}
-
-
-{% block flappy_pigeon__about %}
-<div class="row M_vh">
-    <div class="collumn S_w">
-        <div class="collumn-img flappy-pigeon"></div>
+    <div class="collumn projects__about__infos XL_w">
+        <div class="projects__about__infos__languages XS_h">
+            <h2 class="projects__about__infos__languages--text python">Python 99.2%</h2>
+            <h2 class="projects__about__infos__languages--text batch">Batch 0.8%</h2>
+        </div>
+        <div class="projects__about__infos__bar XXL_h Max_w">
+            <div class="projects__about__infos__bar--colors">
+                <div class="project__about__infos__bar__hover--year">
+                    <h2>In 2025</h2>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="collumn projects__about-text XL_w"></div>
 </div>
 {% endblock %}
 
 
 {% block roll_a_ball__about %}
-<div class="row M_vh inverted_row">
+<div class="row M_vh  row__roll-a-ball">
     <div class="collumn S_w">
         <div class="collumn-img roll-a-ball"></div>
     </div>
-    <div class="collumn projects__about-text XL_w"></div>
+    <div class="collumn projects__about__infos XL_w">
+        <div class="projects__about__infos__languages XS_h">
+            <h2 class="projects__about__infos__languages--text csharp">C# 100%</h2>
+        </div>
+        <div class="projects__about__infos__bar XXL_h Max_w">
+            <div class="projects__about__infos__bar--colors">
+                <div class="project__about__infos__bar__hover--year">
+                    <h2>In 2023</h2>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 {% endblock %}
+
+
+{% block starbound_fan_website__about %}
+<div class=" row inverted_row row__starbound-fan-website M_vh">
+    <div class="collumn S_w">
+        <div class="collumn-img starbound-fan-website"></div>
+    </div>
+    <div class="collumn projects__about__infos XL_w">
+        <div class="projects__about__infos__languages XS_h">
+            <h2 class="projects__about__infos__languages--text html">HTML 54.2%</h2>
+            <h2 class="projects__about__infos__languages--text css">CSS 45.8%</h2>
+        </div>
+        <div class="projects__about__infos__bar XXL_h Max_w">
+            <div class="projects__about__infos__bar--colors">
+                <div class="project__about__infos__bar__hover--year">
+                    <h2>In 2023</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
+{% block flappy_pigeon__about %}
+<div class="row M_vh row__flappy-pigeon">
+    <div class="collumn S_w">
+        <div class="collumn-img flappy-pigeon"></div>
+    </div>
+    <div class="collumn projects__about__infos XL_w">
+        <div class="projects__about__infos__languages XS_h">
+            <h2 class="projects__about__infos__languages--text csharp">C# 100%</h2>
+        </div>
+        <div class="projects__about__infos__bar XXL_h Max_w">
+            <div class="projects__about__infos__bar--colors">
+                <div class="project__about__infos__bar__hover--year">
+                    <h2>In 2021</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
+{% block minecraft_website__about %}
+<div class="row M_vh inverted_row row__minecraft-website">
+    <div class="collumn S_w">
+        <div class="collumn-img mc__website"></div>
+    </div>
+    <div class="collumn projects__about__infos XL_w">
+        <div class="projects__about__infos__languages XS_h">
+            <h2 class="projects__about__infos__languages--text html">Html 50%</h2>
+            <h2 class="projects__about__infos__languages--text css">Css 50%</h2>
+        </div>
+        <div class="projects__about__infos__bar XXL_h Max_w">
+            <div class="projects__about__infos__bar--colors">
+                <div class="project__about__infos__bar__hover--year">
+                    <h2>In 2016</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
+<!-- {% block contact %}
+
+<div class="row">
+
+</div>
+
+{% endblock %} -->
